@@ -13,6 +13,7 @@
 		A7DA42051D9ED65F00A71A6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DA42041D9ED65F00A71A6A /* Assets.xcassets */; };
 		A7DA42081D9ED65F00A71A6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7DA42061D9ED65F00A71A6A /* LaunchScreen.storyboard */; };
 		A7DA42131D9ED65F00A71A6A /* KataStringCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DA42121D9ED65F00A71A6A /* KataStringCalculatorTests.swift */; };
+		A7DA421F1D9ED68A00A71A6A /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DA421E1D9ED68A00A71A6A /* StringCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A7DA420E1D9ED65F00A71A6A /* KataStringCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KataStringCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DA42121D9ED65F00A71A6A /* KataStringCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataStringCalculatorTests.swift; sourceTree = "<group>"; };
 		A7DA42141D9ED65F00A71A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7DA421E1D9ED68A00A71A6A /* StringCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringCalculator.swift; path = Kata/StringCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		A7DA41FC1D9ED65F00A71A6A /* KataStringCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				A7DA421D1D9ED66C00A71A6A /* Kata */,
 				A7DA41FD1D9ED65F00A71A6A /* AppDelegate.swift */,
 				A7DA41FF1D9ED65F00A71A6A /* ViewController.swift */,
 				A7DA42011D9ED65F00A71A6A /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				A7DA42141D9ED65F00A71A6A /* Info.plist */,
 			);
 			path = KataStringCalculatorTests;
+			sourceTree = "<group>";
+		};
+		A7DA421D1D9ED66C00A71A6A /* Kata */ = {
+			isa = PBXGroup;
+			children = (
+				A7DA421E1D9ED68A00A71A6A /* StringCalculator.swift */,
+			);
+			name = Kata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7DA421F1D9ED68A00A71A6A /* StringCalculator.swift in Sources */,
 				A7DA42001D9ED65F00A71A6A /* ViewController.swift in Sources */,
 				A7DA41FE1D9ED65F00A71A6A /* AppDelegate.swift in Sources */,
 			);

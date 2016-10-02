@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  KataStringCalculator
 //
-//  Created by José Servet Font on 30/9/16.
+//  Created by Boolky Bear on 30/9/16.
 //  Copyright © 2016 ByBDesigns. All rights reserved.
 //
 

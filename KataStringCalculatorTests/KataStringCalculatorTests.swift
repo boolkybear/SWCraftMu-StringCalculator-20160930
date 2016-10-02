@@ -2,7 +2,7 @@
 //  KataStringCalculatorTests.swift
 //  KataStringCalculatorTests
 //
-//  Created by José Servet Font on 30/9/16.
+//  Created by Boolky Bear on 30/9/16.
 //  Copyright © 2016 ByBDesigns. All rights reserved.
 //
 
@@ -10,27 +10,67 @@ import XCTest
 @testable import KataStringCalculator
 
 class KataStringCalculatorTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+	
+	func testEmptyString() {
+		let calculator = StringCalculator()
+		let result = calculator.add("")
+		
+		XCTAssert(result == 0)
+	}
+	
+	func testSingleNumber() {
+		let calculator = StringCalculator()
+		let result = calculator.add("1")
+		
+		XCTAssert(result == 1)
+	}
+	
+	func testTwoNumbers() {
+		let calculator = StringCalculator()
+		let result = calculator.add("1,2")
+		
+		XCTAssert(result == 3)
+	}
+	
+	func testThreeNumbers() {
+		let calculator = StringCalculator()
+		let result = calculator.add("1,2,3")
+		
+		XCTAssert(result == 6)
+	}
+	
+	func testFiveNumbers() {
+		let calculator = StringCalculator()
+		let result = calculator.add("1,2,3,4,5")
+		
+		XCTAssert(result == 15)
+	}
+	
+	func testThreeNumbersWithLineFeed() {
+		let calculator = StringCalculator()
+		let result = calculator.add("1\n2,3")
+		
+		XCTAssert(result == 6)
+	}
+	
+	func testCustomDelimiter() {
+		let calculator = StringCalculator()
+		let result = calculator.add("//;\n1;2\n3")
+		
+		XCTAssert(result == 6, "\(result) != 6")
+	}
+	
+	func testNegativeNumbers() {
+		let calculator = StringCalculator()
+		let result = calculator.add("1,-2\n3")
+		
+		XCTAssert(result == -1)
+	}
+	
+	func testNumbersTooBig() {
+		let calculator = StringCalculator()
+		let result = calculator.add("1,1001\n3")
+		
+		XCTAssert(result == 4)
+	}
 }
